@@ -1,0 +1,9 @@
+#GIT
+.git
+
+
+#Dependency Directories
+node_modules/
+
+#Enviroment variables
+.env

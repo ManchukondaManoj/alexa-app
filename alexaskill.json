@@ -1,0 +1,145 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "student details",
+            "intents": [
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "StudentMarks",
+                    "slots": [
+                        {
+                            "name": "studentName",
+                            "type": "studentName"
+                        }
+                    ],
+                    "samples": [
+                        "tell me the marks of {studentName}",
+                        "{studentName} score",
+                        "{studentName} marks",
+                        "marks of {studentName}",
+                        "I want to know the marks of {studentName}",
+                        "how many marks did {studentName} got",
+                        "how much marks did {studentName} score",
+                        "get the marks of {studentName}"
+                    ]
+                },
+                {
+                    "name": "StudentSubjectMarks",
+                    "slots": [
+                        {
+                            "name": "subject",
+                            "type": "subject"
+                        },
+                        {
+                            "name": "studentName",
+                            "type": "studentName"
+                        }
+                    ],
+                    "samples": [
+                        "{studentName} marks in {subject}",
+                        "{subject} marks of {studentName}",
+                        "{studentName} {subject} marks",
+                        "how much marks did {studentName} got in {subject}",
+                        "what are {studentName} marks in {subject}",
+                        "get me {subject} marks of {studentName}"
+                    ]
+                },
+                {
+                    "name": "StudentGrade",
+                    "slots": [
+                        {
+                            "name": "studentName",
+                            "type": "studentName"
+                        }
+                    ],
+                    "samples": [
+                        "grade of {studentName}",
+                        "what is the  grade of {studentName}",
+                        "{studentName} grade"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "studentName",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "Hari"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Sreenija"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Harisha"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Srinu"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Ram"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Prasad"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Manoj"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "subject",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "science"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "english"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "maths"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
