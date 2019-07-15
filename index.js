@@ -9,7 +9,7 @@ app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 
 /**
-  To insert dummy data uncomment the line 14 & 20.
+  To insert dummy data uncomment the line 14 & 19.
   After inseting the data stop the server and comment the same.
 
   Keep the data you want in create.js of below mentioned folder

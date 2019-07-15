@@ -19,8 +19,7 @@ global.postgresSequelize = new Sequelize(postgresCredentials.database, postgresC
     min: 1,
     acquire: 30000,
     idle: 20000
-  },
-  operatorsAliases: false
+  }
 })
 
 let seq = [postgresSequelize]

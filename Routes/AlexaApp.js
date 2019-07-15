@@ -1,9 +1,9 @@
 const AlexaApp = require(`${appDir}/Models/AlexaApp`)
 
 module.exports = async (req, res) => {
+  let jsonObj = {}
 try {
   // console.log('REQUEST_BODY-------',JSON.stringify(req.body));
-  let jsonObj = {}
   if(req.body.request.type === 'IntentRequest'){
     let requestIntentType = req.body.request.intent.name
     switch (requestIntentType) {
@@ -133,6 +133,17 @@ try {
 } catch(e){
   console.log('ERROR');
   console.log(e);
+  jsonObj = {
+    "version":"1.0",
+    "response": {
+      "shouldEndSession": false,
+      "outputSpeech": {
+        "type": "SSML",
+        "ssml":`<speak>Something went wrong, please try again</speak>`
+      }
+    }
+  }
+  res.json(jsonObj)
   console.log('ERROR');
 }
 }
