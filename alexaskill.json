@@ -32,6 +32,11 @@
                         }
                     ],
                     "samples": [
+                        "can you please get me the marks of {studentName}",
+                        "please get me the marks of {studentName}",
+                        "show me the marks of {studentName}",
+                        "read me the marks of {studentName}",
+                        "get me the marks of {studentName}",
                         "tell me the marks of {studentName}",
                         "{studentName} score",
                         "{studentName} marks",
@@ -55,6 +60,14 @@
                         }
                     ],
                     "samples": [
+                        "get me {studentName} marks in {subject}",
+                        "how many marks did {studentName} got in {subject}",
+                        "can you please get me {studentName} marks in {subject}",
+                        "can you please get me {subject} marks of {studentName}",
+                        "please get me {subject} marks of {studentName}",
+                        "can you please tell me {subject} marks of {studentName}",
+                        "I want to know {subject} marks of {studentName}",
+                        "get me the {subject} marks of {studentName}",
                         "{studentName} marks in {subject}",
                         "{subject} marks of {studentName}",
                         "{studentName} {subject} marks",
@@ -72,9 +85,32 @@
                         }
                     ],
                     "samples": [
+                        "grade of the {studentName}",
+                        "please read the grade of {studentName}",
+                        "read the grade of {studentName}",
+                        "tell me {studentName} grade",
+                        "what is the grade of {studentName}",
+                        "can you please get me the grade of {studentName}",
+                        "please tell me the grade of {studentName}",
+                        "get {studentName} grade",
+                        "get me the grade of {studentName}",
                         "grade of {studentName}",
-                        "what is the  grade of {studentName}",
                         "{studentName} grade"
+                    ]
+                },
+                {
+                    "name": "MissionIntent",
+                    "slots": [],
+                    "samples": [
+                        "please tell me the goal of seedworks",
+                        "please tell me the mission of seedworks",
+                        "mission of seedworks team",
+                        "mission of seed works team",
+                        "mission of seedworks",
+                        "what is the goal of seedworks",
+                        "goal of seedworks",
+                        "seedworks mission goal",
+                        "seedworks mission intent"
                     ]
                 }
             ],
@@ -82,6 +118,11 @@
                 {
                     "name": "studentName",
                     "values": [
+                        {
+                            "name": {
+                                "value": "Abhishek"
+                            }
+                        },
                         {
                             "name": {
                                 "value": "Hari"

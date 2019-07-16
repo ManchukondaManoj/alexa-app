@@ -1,45 +1,31 @@
-const AlexaStudentDetails = postgresSequelize.import(`${appDir}/Schemas/alexa_student_marks.js`)
+// const AlexaStudentDetails = postgresSequelize.import(`${appDir}/Schemas/alexa_student_marks.js`)
+const AlexaStudentDetails = postgresSequelize.import(`${appDir}/Schemas/alexa_devices.js`)
 
 module.exports = async () => {
     return (async () => {
         try {
           let studentMarks = [
             {
-              ENGLISH: 50,
-              MATHS:55,
-              SCIENCE: 60,
-              GRADE: "B"
+              student_name: 'NAVIN'
             },
             {
-              ENGLISH: 55,
-              MATHS:60,
-              SCIENCE: 70,
-              GRADE: "A"
+              student_name: 'SRINI'
             },
             {
-              ENGLISH: 65,
-              MATHS:65,
-              SCIENCE: 70,
-              GRADE: "A"
+              student_name: 'RAMU'
             },
             {
-              ENGLISH: 65,
-              MATHS:65,
-              SCIENCE: 75,
-              GRADE: "A"
+              student_name: 'HARRY'
             },
             {
-              ENGLISH: 65,
-              MATHS:70,
-              SCIENCE: 80,
-              GRADE: "A"
-            },
+              student_name: 'NICK'
+            }
           ]
             let dataObj = studentMarks.map((obj, index) => {
               return {
                 ...obj,
-                ID: index+1,
-                TOTAL: obj.MATHS + obj.ENGLISH + obj.SCIENCE
+                alexa_device_id: "amzn1.ask.device.AFSSNVH6QRKNAWUTYA2AZCFN3T2M32P5ZWWTC26JERLY24VL6X7FCEH2BTKWH6FLMA6IBVCU33WUX6BVJETPOGX32YZKKV3L5QR2AQZOBUPJWFGJTYFDPNUYWGNLQ27JSO5BPORUIKDRTJDAYAFEUJON62PULWY2WIYNEKHSRXXHTAKQRWDCG",
+                id: 12 + index
               }
             })
             console.log(dataObj);

@@ -17,7 +17,7 @@ app.use(express.urlencoded({extended: true}))
   Note: Please check you have required schemas in your db
 */
 // let createdata = require(`${appDir}/Models/AlexaApp/Methods/create.js`)
-
+// let createdata = require(`${appDir}/Models/AlexaApp/Methods/create_bak.js`)
 app.use('/alexa', Routes)
 
 connectedEmitter.on('connectedDbs', () => {

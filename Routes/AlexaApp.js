@@ -3,7 +3,7 @@ const AlexaApp = require(`${appDir}/Models/AlexaApp`)
 module.exports = async (req, res) => {
   let jsonObj = {}
 try {
-  // console.log('REQUEST_BODY-------',JSON.stringify(req.body));
+  console.log('REQUEST_BODY-------',JSON.stringify(req.body));
   if(req.body.request.type === 'IntentRequest'){
     let requestIntentType = req.body.request.intent.name
     switch (requestIntentType) {
@@ -13,6 +13,39 @@ try {
         break;
       case 'StudentGrade': launchStudentGrade(req, res)
         break;
+      case 'MissionIntent': launchMissionIntent(req, res)
+        break;
+      case 'HindiIntent': launcHindiIntent(req, res)
+        break;
+    }
+
+    async function launcHindiIntent(req, res){
+      jsonObj = {
+        "version":"1.0",
+        "response": {
+          "shouldEndSession": false,
+          "outputSpeech": {
+            "type": "SSML",
+            "ssml":`<speak>mere naam manoj hai</speak>`
+          }
+        }
+      }
+      res.json(jsonObj)
+    }
+
+    async function launchMissionIntent(req, res){
+      jsonObj = {
+        "version":"1.0",
+        "response": {
+          "shouldEndSession": false,
+          "outputSpeech": {
+            "type": "SSML",
+            "ssml":`<speak>provide superior seed solutions by harnessing technology  and innovation to create value for all stakeholders in a sustainable manner
+Market leadership in core crops by 2025</speak>`
+          }
+        }
+      }
+      res.json(jsonObj)
     }
     async function launchStudentMarks(req, res){
           let studentDetails = {
@@ -118,6 +151,8 @@ try {
         }
     }
   } else {
+    console.log('--------------------------------------------------------');
+    console.log('--------------------------------------------------------');
     jsonObj = {
       "version":"1.0",
       "response": {

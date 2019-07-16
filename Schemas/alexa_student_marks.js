@@ -4,7 +4,8 @@ module.exports = function (postgresSequelize, DataTypes) {
     ID: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      primaryKey: true
+      primaryKey: true,
+      unique: true
     },
     MATHS: {
       type: DataTypes.INTEGER,
